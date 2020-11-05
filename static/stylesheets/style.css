@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+}
+
+.menu-card {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(65, 65, 65);
+}
+
+.menu-title {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(65, 65, 65);
+    text-align: center;
+}
+
+.menu-card h6 {
+    margin-top: 10px;
+}
+
+.ingredients {
+    color: orange;
+    font-size: small;
+}
+
+.menu-title-logo {
+    font-family: 'Dancing Script', cursive;
+    color: orange;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu-header-text {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(65, 65, 65);
+    text-align: center;
+}
+
+
+/* navbar */
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    color: orange !important;
+    font-size: x-large;
+}
+
+/* login */
+
+.login-title {
+    font-family: 'Comfortaa', cursive;
+    color: rgb(65, 65, 65);
+    text-align: center;
+}
+
+.login-container {
+    font-family: 'Comfortaa', cursive;
+    margin-top: 200px;
+    max-width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.btn-light {
+    margin-right: auto;
+    margin-left: auto;
+    border-color: orange;
+    color: orange;
+}
+
+.login-items {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.register-form {
+    text-align: center;
+}
+
+.register-inputs {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: transparent !important;
+}
+
+/* reservation */
+
+.reservation-title {
+    margin-top: 100px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.container-reservation {
+    font-family: 'Comfortaa', cursive;
+}
+
+.reservation-inputs {
+    margin: 20px 0px;
+    max-width: 400px;
+}
+
+
+.reservations {
+    font-family: 'Comfortaa', cursive;
+}
+
+.reservations h2 {
+    margin-top: 50px;
+}
+
+.reservations h5 {
+    color: orange;
+}
+
+/* home page */
+
+.welcome-title {
+    color: orange;
+    font-size: 130px;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.col-sm-3 {
+    text-align: center;
+}
+
+.home-icons {
+    margin-bottom: 20px;
+}
+
+.home-icon-des {
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: rgb(65, 65, 65);
+}
+
+.home-icon-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(65, 65, 65);
+}
+
+.home-reservation {
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    color: orange;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.day-special-text {
+    color: orange;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.day-special-card {
+    margin-bottom: 25px;
+}
