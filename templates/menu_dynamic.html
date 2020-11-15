@@ -28,6 +28,7 @@
                 <a class="nav-item nav-link " href="{{ url_for('index')}}">Home</a>
                 <a class="nav-item nav-link active" href="{{ url_for('menud')}}">Menu</a>
                 <a class="nav-item nav-link" href="{{ url_for('contact')}}">Reservation</a>
+                <a class="nav-item nav-link " href="{{ url_for('reviews')}}">Reviews</a>
                 <a class="nav-item nav-link" href="{{ url_for('login')}}">Admin Login</a>
             </div>
         </div>
@@ -74,76 +75,21 @@
         </div>
 
 
+        <!-- foods go here -->
         <div class="row">
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/1.jpg">
-                <h6>Buckwheat Crepes with Creamy Leeks and Baked Eggs</h6>
-                <p class="ingredients"> eggs, sugar, kosher salt, whole milk, flour</p>
-                <p>340 Cal</p>
-            </div>
 
+            {%for food in food_list %}
             <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/2.jpg">
-                <h6>Gougères</h6>
-                <p class="ingredients"> butter, kosher salt, nutmeg, eggs, Comté cheese or Gruyère, black pepper</p>
-                <p>240 Cal</p>
+                <img style="width: 100%; height: 70%;" src="{{ food[3] }}">
+                <h6>{{ food[0] }}</h6>
+                <p class="ingredients">{{ food[2] }}</p>
+                <p>{{ food[1] }} Cal</p>
             </div>
+            {% endfor %}
 
 
         </div>
-
-        <div class="row">
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/3.jpg">
-                <h6>Croque-Monsieur</h6>
-                <p class="ingredients">salted butter, flour, milk, whole grain mustard, nutmeg</p>
-                <p>450 Cal</p>
-            </div>
-
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/4.jpg">
-                <h6>Ratatouille</h6>
-                <p class="ingredients"> thyme, kosher salt, garlic , black pepper, basil leaves, black pepper</p>
-                <p>590 Cal</p>
-            </div>
-        </div>
-
-
-
-
-        <div class="row">
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/5.jpg">
-                <h6>Poulet Vallée d’Auge</h6>
-                <p class="ingredients">salted butter, olive, shallots, Calvados , chickens</p>
-                <p>980 Cal</p>
-            </div>
-
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/6.jpg">
-                <h6>Pan-Roasted Chicken Paillard</h6>
-                <p class="ingredients"> thyme, kosher salt, garlic , black pepper, lemon</p>
-                <p>670 Cal</p>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src="../static/images/7.jpg">
-                <h6>Roast Provençal Chicken</h6>
-                <p class="ingredients">garlic , chicken, shallots, Calvados , chickens</p>
-                <p>1020 Cal</p>
-            </div>
-
-            <div class="col-md-6 menu-card">
-                <img style="width: 100%; height: 70%;" src=" ../static/images/8.jpg">
-                <h6>Bistro Steak with Buttermilk Onion Rings</h6>
-                <p class="ingredients"> hazelnut, Sherry vinegar, vegetable oil , shallot, Dijon mustard</p>
-                <p>670 Cal</p>
-            </div>
-        </div>
-
+        <!-- end of foods -->
 
     </div>
 

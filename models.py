@@ -30,4 +30,30 @@ class Reservations(db.Model):
     def get_id(self):
         return (self.id)
 
+class Foods(db.Model):
+    """save requested json file for each quiz"""
 
+    __tablename__ = "foods"
+    id = db.Column(db.Integer, primary_key=True)
+    food_name = db.Column(db.String())
+    food_cal = db.Column(db.String())
+    food_ing = db.Column(db.String())
+    pic_src = db.Column(db.String())
+
+
+    def get_id(self):
+        return (self.id)
+
+
+class Reviews(db.Model):
+    """save requested json file for each quiz"""
+
+    __tablename__ = "reviews"
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String())
+    date = db.Column(db.String())
+    reviews = db.Column(db.String())
+
+
+    def get_id(self):
+        return (self.id)

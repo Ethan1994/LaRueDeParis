@@ -180,3 +180,12 @@ a:hover {
 .day-special-card {
     margin-bottom: 25px;
 }
+
+/* admin */
+.admin-btn {
+    margin: 30px 10px;
+}
+
+.admin-h {
+    margin-bottom: 100px;
+}

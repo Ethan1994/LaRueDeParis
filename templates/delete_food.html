@@ -12,7 +12,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="../static/stylesheets/style.css" rel="stylesheet" />
 
-    <title>Reservation</title>
+    <title>Delete Food</title>
 </head>
 
 <body>
@@ -27,32 +27,32 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link " href="{{ url_for('index')}}">Home</a>
                 <a class="nav-item nav-link " href="{{ url_for('menud')}}">Menu</a>
-                <a class="nav-item nav-link active" href="{{ url_for('contact')}}">Reservation</a>
-                <a class="nav-item nav-link " href="{{ url_for('reviews')}}">Reviews</a>
-                <a class="nav-item nav-link " href="{{ url_for('login')}}">Admin Login</a>
+                <a class="nav-item nav-link " href="{{ url_for('contact')}}">Reservation</a>
+                <a class="nav-item nav-link" href="{{ url_for('admindashboard')}}">Admin Dashboard</a>
+                <a class="nav-item nav-link" href="{{ url_for('index')}}">Logout</a>
             </div>
         </div>
     </nav>
 
     <div class="container container-reservation">
         <div class="row">
-            <div class="col">
-                <h3 class="reservation-title">Make a reservation</h3>
+            <div class="col-md-12">
+                <h3 class="reservation-title">Delete Food from Menu</h3>
                 <br>
                 <br>
 
                 <h5>{{ msg }}</h5>
-                <p>*All fields are required</p>
-                <form method="POST" action="{{ url_for('contact')}}">
-                    <input class="form-control reservation-inputs" name="name" type="text"
-                        placeholder="Reservation Name" required>
-                    <input class="form-control reservation-inputs" name="date" type="date" placeholder="Date" required>
-                    <input class="form-control reservation-inputs" name="time" type="time" placeholder="Time" required>
-                    <input class="form-control reservation-inputs" name="nums" type="text" placeholder="Guest Numbers"
-                        required>
-                    <button type="submit" class="btn btn-light">Submit</button>
+                <p>Select the food you want to delete</p>
+                <form method="POST" action="{{ url_for('delfood')}}">
+                    <select class="form-control reservation-inputs" name="food_name">
+                        {%for food in food_list %}
+                        <option name="{{ food }}" value="{{ food }}">{{ food }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
                 </form>
             </div>
+
         </div>
     </div>
 

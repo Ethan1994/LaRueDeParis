@@ -12,13 +12,13 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="../static/stylesheets/style.css" rel="stylesheet" />
 
-    <title>Reservation</title>
+    <title>Admin</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('index')}}">Paris</a>
+        <a class="navbar-brand" href="#">Paris</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,34 +27,34 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link " href="{{ url_for('index')}}">Home</a>
                 <a class="nav-item nav-link " href="{{ url_for('menud')}}">Menu</a>
-                <a class="nav-item nav-link active" href="{{ url_for('contact')}}">Reservation</a>
-                <a class="nav-item nav-link " href="{{ url_for('reviews')}}">Reviews</a>
-                <a class="nav-item nav-link " href="{{ url_for('login')}}">Admin Login</a>
+                <a class="nav-item nav-link" href="{{ url_for('contact')}}">Reservation</a>
+                <a class="nav-item nav-link" href="{{ url_for('index')}}">Logout</a>
             </div>
         </div>
     </nav>
 
-    <div class="container container-reservation">
-        <div class="row">
-            <div class="col">
-                <h3 class="reservation-title">Make a reservation</h3>
-                <br>
-                <br>
 
-                <h5>{{ msg }}</h5>
-                <p>*All fields are required</p>
-                <form method="POST" action="{{ url_for('contact')}}">
-                    <input class="form-control reservation-inputs" name="name" type="text"
-                        placeholder="Reservation Name" required>
-                    <input class="form-control reservation-inputs" name="date" type="date" placeholder="Date" required>
-                    <input class="form-control reservation-inputs" name="time" type="time" placeholder="Time" required>
-                    <input class="form-control reservation-inputs" name="nums" type="text" placeholder="Guest Numbers"
-                        required>
-                    <button type="submit" class="btn btn-light">Submit</button>
-                </form>
+    <div class="container">
+        <div class="row reservations">
+            <div class="col-md-12" style="text-align: center;">
+                <h1 class="admin-h">Admin Dashboard</h1>
+                <a href="{{ url_for('reservations')}}"><button class="btn btn-light admin-btn">View
+                        Reservations</button></a>
+                <br>
+                <a href="{{ url_for('addfood')}}"><button class="btn btn-light admin-btn">Add New Food to the
+                        Menu</button></a><br>
+                <a href="{{ url_for('delfood')}}"><button class="btn btn-light admin-btn">Delete Food from
+                        Menu</button></a>
+
+
+
             </div>
+
         </div>
+
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
