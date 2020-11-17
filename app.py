@@ -1,12 +1,7 @@
-from flask import Flask, render_template, redirect, url_for, flash, request, make_response
+from flask import Flask, render_template, redirect, request, make_response
 from wtform_fields import *
 import models as mds
-from passlib.hash import pbkdf2_sha256
-from flask_login import LoginManager, login_user, current_user, logout_user
-import requests
-from clarifai.errors import ApiError
-import uuid
-from datetime import date
+from flask_login import LoginManager, login_user
 from flask_restful import Api, Resource
 import os
 from datetime import date, datetime
@@ -54,7 +49,7 @@ class Menu(Resource):
 
 class Contact(Resource):
     """
-    Contact us page
+    Customer contact us page
     """
 
     def get(self):
@@ -76,7 +71,7 @@ class Contact(Resource):
 
 class Reservations(Resource):
     """
-    Reservation page
+    Admin reservation page
     """
 
     def get(self):
@@ -253,17 +248,17 @@ class Errors(Resource):
 
     @app.errorhandler(404)
     def page_not_found(e):
-        # note that we set the 404 status explicitly
+        # note that set the 404 status explicitly
         return ('Page not found'), 404
 
     @app.errorhandler(500)
     def not_logged_in(e):
-        # note that we set the 404 status explicitly
+        # note that set the 500 status explicitly
         return ('Server Error'), 500
 
     @app.errorhandler(405)
     def not_allowed(e):
-        # note that we set the 404 status explicitly
+        # note that set the 405 status explicitly
         return ('Method not allowed'), 405
 
 
@@ -282,4 +277,4 @@ api.add_resource(Logout, "/logout")
 
 # app run
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
