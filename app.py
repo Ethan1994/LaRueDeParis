@@ -12,7 +12,8 @@ api = Api(app)
 
 # database configs
 app.config[
-    'SQLALCHEMY_DATABASE_URI'] = 'postgres://hjffxlgqpdaftq:142f340bfcfff7f0fafad328a329282136dd3f042231cdb5fd4f4d95c7cbcb71@ec2-54-235-192-146.compute-1.amazonaws.com:5432/d6n0mqee5s1tfh'
+    'SQLALCHEMY_DATABASE_URI'] = 'postgres://fdrpsvrirqvqzk:03522ee4d426e10d33ce521d69e55d5f4c2934888994162f74476d111dda8b64@ec2-3-91-139-25.compute-1.amazonaws.com:5432/ddmcrd2qssvd24'
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 UPLOAD_FOLDER = dir_path + '/static/images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
